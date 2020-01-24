@@ -1,0 +1,36 @@
+1/24/2020 Notes
+
+Goal is to transform any positive integer (# of seconds) into the translated time stamp (min, hr, day, wk, mnth, etc.)
+
+MINUTES
+141 --> 2m, 21s
+    How to get the 2 in 2m --> 141/60/60 --> long division, esentially
+
+    How to get the 21s --> 60seconds = 1min; 60s*2(from the 2min)=120; 141-120= 21 leftover seconds
+
+697 --> 11m, 37s
+    11--> 60*11=660
+    37--> 697-660= 37s
+
+**possible to use the % operator at any point?
+    divide number by 60 until % = a number from 1 to 59; the remainder becomes seconds
+        but how would this work for converting into days, weeks, etc?
+
+HOURS
+**possible to use the % operator at any point?
+    divide number by 60 until % = a number from 1 to 59; the remainder becomes min---> anytime it runs through a loop, there's a counter
+       runs through the minute function next...continutes until % is a # 1 to 59
+        remainder becomes seconds
+
+DAYS
+24hrs=1 day
+divide number by 24 until % = a number between 0 and 24
+
+******REALIZATION 1 @1:40pm: I actually don't think this will work now because te numbers are huge amounts of seconds and need to be broken down
+in reverse order I think? Like you go from seconds to minutes to hours etc...
+
+******REALIZATION 2 @1:42pm: ACTUALLY IT WILL WORK I WAS JUST CONFUSING NUMBERS IN MY HEAD WHICH IS WHY I DRAW THINGS OUT INSTEAD OF TYPING FUCK
+
+    divide number by 60 until % = a number from 1 to 59; the remainder becomes min---> anytime it runs through a loop, there's a counter
+       runs through the minute function next...continutes until % is a # 1 to 59
+        remainder becomes seconds
