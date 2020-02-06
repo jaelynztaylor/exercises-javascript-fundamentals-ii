@@ -20,11 +20,52 @@
  * @returns {string} A run-length encoded copy of the input string
  */
 
-function runLengthEncode(num) {
-  // This is your job. :)
+function runLengthEncode(string) {
+  let element = string[i]
+  let newArray= []
+  for (let i = 0; i < string.length; i++) {
+    if {
+      element = element[i +1]
+      count++
+    }
+   else {
+     element != 
+   } 
+  }
+}
 
-  // Remember, if the code is stumping you, take a step back and
-  // make sure you can do it by hand.
+function stringtoArray(string) {
+  let stringArray = [];
+  for (let i of string) { stringArray.push(i); }
+
+  return stringArray;
+}
+
+function arrayCounter(array) {
+
+}
+
+/*the code below is what's on Jalen's git as well! I wanted
+to keep it so I can compare it with what I was trying to do
+ABOVE
+*/
+
+function runLengthEncode(num) {
+  let newArr=[];
+  let count=1
+  for (let i = 0; i < num.length; i++) {
+    if (num[i]===num[i+1]){
+  count+=1
+  } else {
+  newArr.push(count,num[i])
+  count=1
+  }
+  }
+  let newStr=''
+  for (let i of newArr){
+  newStr=newStr+i }
+  console.log(newStr);
+  return newStr
 }
 
 if (require.main === module) {
